@@ -1,18 +1,24 @@
-// config.js
+// config.js - Nihai, Toplantı Odaklı ve Batch Kontrollü Versiyon
+
 const config = {
+  // --- Genel Ayarlar ---
+  // Not: "gemini-2.0-flash" henüz mevcut olmadığından, en güncel ve hızlı "Flash" modeli kullanılıyor.
+  // Google yeni bir model duyurduğunda bu satırı güncelleyebilirsiniz.
+  MODEL_NAME: "gemini-2.5-flash",
+
   // --- Dosya ve Klasör Ayarları ---
   VIDEO_PATH: 'Input/sample-video.mp4',
   FRAMES_FOLDER: 'temp_frames',
+  AUDIO_FOLDER: 'temp_audio',
 
-  // --- Analiz Parametreleri ---
-  BATCH_SIZE: 10,
-  FRAME_INTERVAL_SECONDS: 12,             // DEĞİŞİKLİK: 10 saniyeden 12 saniyeye çıkarıldı.
-  VIDEO_DURATION_LIMIT: '00:15:00',       // DEĞİŞİKLİK: Varsayılan süre 20 dakikaya düşürüldü.
-  REQUEST_LIMIT: 4,
+  // --- Batch (Parça) Analiz Ayarları ---
+  TOTAL_BATCHES: 2,
+  SECONDS_PER_BATCH: 10,
+  FRAME_INTERVAL_SECONDS: 10,
 
   // --- Tekrar Deneme Mekanizması Ayarları ---
   MAX_RETRIES: 3,
-  INITIAL_DELAY_MS: 1000,
+  INITIAL_DELAY_MS: 2000,
 };
 
 module.exports = config;
