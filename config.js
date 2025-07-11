@@ -13,8 +13,8 @@ const config = {
 
   // --- Batch (Parça) Analiz Ayarları ---
   TOTAL_BATCHES: 2,
-  SECONDS_PER_BATCH: 10,
-  FRAME_INTERVAL_SECONDS: 10,
+  SECONDS_PER_BATCH: 20,
+  FRAME_INTERVAL_SECONDS: 2,
 
   // --- Tekrar Deneme Mekanizması Ayarları ---
   MAX_RETRIES: 3,
